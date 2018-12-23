@@ -9637,6 +9637,7 @@
     flex-direction: column;
     background-color: white;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+    padding: 32px 21px;
   }
 
   .hbs hr {
@@ -9647,7 +9648,6 @@
 
   .houzz-back-main-card {
     display: flex;
-    padding: 32px 21px;
     margin-bottom: 16px;
   }
 
@@ -9725,6 +9725,135 @@
     letter-spacing: normal;
     color: #666666;
   }
+
+  .houzz-back-recommended-project-card {
+    position: relative;
+  }
+
+  .houzz-back-recommended-project-title {
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #222222;
+    margin: 16px 0;
+  }
+
+  .houzz-back-projects-filter-toolbar {
+
+  }
+
+  .houzz-back-hero-project-container {
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  .project-hero-caption {
+    border-radius: 3px;
+    background-color: #6cb83b;
+    color: white;
+    padding: 6px 16px;
+    text-align: center;
+    width: fit-content;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+  }
+
+  .project-hero-content-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    display: flex;
+    color: white;
+    padding: 16px;
+  }
+
+ .project-hero-content {
+   flex-grow: 1;
+ }
+
+  .project-hero-content-title {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .project-hero-content-description {
+
+  }
+
+  .project-hero-read-more {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .houzz-back-hero-project-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .houzz-back-project-container {
+    display: flex;
+    margin: 16px 0;
+  }
+
+  .project-image-container {
+    width: calc(45% - 21px);
+    height: 267px;
+    margin-right: 21px;
+  }
+
+  .houzz-back-project-img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .project-content-container {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  .project-title {
+    font-family: proxima-nova, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #222222;
+  }
+
+  .project-description {
+    font-family: proxima-nova, sans-serif;
+    font-size: 16px;
+  }
+
+  .project-description-read-more {
+    font-family: proxima-nova, sans-serif;
+    font-size: 16px;
+    color: #6cb83b;
+    flex-grow: 1;
+  }
+
+  .project-status {
+    font-family: proxima-nova, sans-serif;
+    font-size: 16px;
+    color: #979797;
+  }
+
 
 </style>
 
@@ -11029,11 +11158,21 @@
 
             </div>
             <div class="houzz-back-hero-project-container">
-
+              <div class="project-hero-caption">Project of the month</div>
+              <div class="project-hero-content-container">
+                <div class="project-hero-content">
+                  <div class="project-hero-content-title">Project Name</div>
+                  <div class="project-hero-content-description">
+                    Let's help more children in Northview Heights overcome obstacles and reach their potential. s a
+                  </div>
+                </div>
+                <div class="project-hero-read-more">Read More</div>
+              </div>
+              <img src="https://projectlifenow.com/wp-content/uploads/2018/01/Project-Life-Donation-Banner2.jpg" class="houzz-back-hero-project-img" />
             </div>
             <div class="houzz-back-project-container">
               <div class="project-image-container">
-
+                <img src="https://9b16f79ca967fd0708d1-2713572fef44aa49ec323e813b06d2d9.ssl.cf2.rackcdn.com/1140x_a10-7_cTC/organ-donor-donation-walk-1538088361.jpg" class="houzz-back-project-img" />
               </div>
               <div class="project-content-container">
                 <div class="project-title">This is the project name</div>
@@ -11047,6 +11186,39 @@
               </div>
             </div>
             <hr>
+
+            <div class="houzz-back-project-container">
+              <div class="project-image-container">
+                <img src="" class="houzz-back-project-img" />
+              </div>
+              <div class="project-content-container">
+                <div class="project-title">This is the project name</div>
+                <div class="project-description">
+                  Let's help more children in Northview Heights overcome obstacles and reach their potential.
+                </div>
+                <div class="project-description-read-more">Read More</div>
+                <div class="project-status">
+                  $2234 donated  by Houzz
+                </div>
+              </div>
+            </div>
+            <hr>
+
+            <div class="houzz-back-project-container">
+              <div class="project-image-container">
+                <img src="" class="houzz-back-project-img" />
+              </div>
+              <div class="project-content-container">
+                <div class="project-title">This is the project name</div>
+                <div class="project-description">
+                  Let's help more children in Northview Heights overcome obstacles and reach their potential.
+                </div>
+                <div class="project-description-read-more">Read More</div>
+                <div class="project-status">
+                  $2234 donated  by Houzz
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
