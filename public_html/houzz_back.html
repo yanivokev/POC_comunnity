@@ -5,6 +5,12 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
 
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script src="feature_data.js"></script>
 
   <base href="https://www.houzz.com/product/113781475-kendall-blue-bathroom-vanity-48-contemporary-bathroom-vanities-and-sink-consoles">
   <title>Kendall Blue Bathroom Vanity - Contemporary - Bathroom Vanities And Sink Consoles - by Houzz</title>
@@ -10991,7 +10997,7 @@
               <div class="houzz-back-main-card-summary-card">
                 <div class="houzz-back-main-card-summary-card-icon">
                 </div>
-                <div class="houzz-back-main-card-summary-card-value">
+                <div id="open-projects" class="houzz-back-main-card-summary-card-value">
                   26
                 </div>
                 <div class="houzz-back-main-card-summary-card-caption">
@@ -11001,21 +11007,21 @@
               <div class="houzz-back-main-card-summary-card">
                 <div class="houzz-back-main-card-summary-card-icon">
                 </div>
-                <div class="houzz-back-main-card-summary-card-value">
+                <div id="people-donated" class="houzz-back-main-card-summary-card-value">
                   26
                 </div>
                 <div class="houzz-back-main-card-summary-card-caption">
-                  Open Projects
+                  People Donated
                 </div>
               </div>
               <div class="houzz-back-main-card-summary-card">
                   <div class="houzz-back-main-card-summary-card-icon">
                   </div>
-                  <div class="houzz-back-main-card-summary-card-value">
-                    26
+                  <div id="overall-donated" class="houzz-back-main-card-summary-card-value">
+                  $ <span> 26 </span>
                   </div>
                   <div class="houzz-back-main-card-summary-card-caption">
-                    Open Projects
+                    Overall Donated
                   </div>
                 </div>
             </div>
@@ -11052,4 +11058,7 @@
       </div>
     </div>
   </div>
+  <script>
+    fillDetails(featureData);
+  </script>
 </body>
