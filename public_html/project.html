@@ -11336,7 +11336,7 @@
               </div>
               <div class="donation-actions-container">
                 volunteer
-                <button type="button" class="donate-button" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="donate-button" data-toggle="modal" data-target="#donationModal">
                     Houzz it Forward
                 </button>
               </div>
@@ -11352,8 +11352,8 @@
       </div>
     </div>
   </div>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"      aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Donation Modal -->
+  <div class="modal fade" id="donationModal" tabindex="-1" role="dialog"      aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -11367,16 +11367,44 @@
             <div class="radio-toolbar">
               <input type="radio" name="amount" value="$1">$1<br>
               <input type="radio" name="amount" value="$5">$5<br>
-              <input type="radio" name="amount" value="All">All<br> 
+              <input type="radio" name="amount" value="$27">All<br> 
               <input type="radio" name="amount" value="Other">Another amount: ____<br>   
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary">Donate</button>
+            <button type="button" class="btn btn-primary" id="donateBtn">Donate</button>
           </div>
         </div>
       </div>
+    </div>
+      <!-- Thank you Modal -->
+  <div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog"      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title" id="exampleModalLabel">Thank you for Houzzing it forward!</div>
+          </div>
+          <div class="modal-body">
+            <div class="donation-modal-text">
+                A donation in the amount of <span id="modalAmount"></span> has been forward to the <span id="modalProjectName"></span> project.</br></br>
+                You have $5 remaining in your account.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="done">Done</button>
+          </div>
+        </div>
+      </div>
+      <script>
+        $('#donateBtn').click(function() {
+          var donationAmount = document.querySelector('input[name="amount"]:checked').value;
+          $('#donationModal').modal('hide');
+          $('#thankYouModal').modal('show');
+          $('#modalAmount').text(donationAmount);
+          $('#modalProjectName').text($('.project-title')[0].innerText);
+        });
+      </script>
     </div>
   <script type="text/javascript">
     fillDetails(projectData);
