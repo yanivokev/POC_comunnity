@@ -9745,11 +9745,39 @@
     line-height: 1.2;
     letter-spacing: normal;
     color: #222222;
-    margin: 16px 0;
+    margin: 24px 0 16px 0;
   }
 
   .houzz-back-projects-filter-toolbar {
+    display: flex;
+    font-family: proxima-nova, sans-serif;
+    font-size: 14px;
+    color: #484848;
+    margin-bottom: 16px;
+  }
 
+  .view-button-toggle {
+    display: flex;
+    margin-right: 21px;
+    align-items: center;
+  }
+
+  .view-button-toggle i {
+    margin-right: 4px;
+  }
+
+  .toolbar-caption {
+    margin-right: 21px;
+  }
+
+  .toolbar-dropdown {
+    flex-grow: 1;
+    font-weight: 600;
+    display: flex;
+  }
+
+  .toolbar-dropdown i {
+    margin-left: 4px;
   }
 
   .houzz-back-hero-project-container {
@@ -9799,9 +9827,15 @@
     font-size: 16px;
     border: 1px solid white;
     color: white;
-    padding: 10px 40px;
+    padding: 10px 30px;
     border-radius: 3px;
     cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 42px;
+    margin-left: 30px;
+    align-self: center;
   }
 
   .houzz-back-project-container {
@@ -9854,6 +9888,10 @@
     font-family: proxima-nova, sans-serif;
     font-size: 16px;
     color: #979797;
+  }
+
+  .project-status i {
+    margin-right: 4px;
   }
 
 
@@ -11124,7 +11162,6 @@
                   <img src="https://poc-community.herokuapp.com/ic-projects.svg" class="houzz-back-main-card-summary-card-image" />
                 </div>
                 <div id="open-projects" class="houzz-back-main-card-summary-card-value">
-                  26
                 </div>
                 <div class="houzz-back-main-card-summary-card-caption">
                   Open Projects
@@ -11135,7 +11172,6 @@
                   <img src="https://poc-community.herokuapp.com/ic-people.svg" class="houzz-back-main-card-summary-card-image" />
                 </div>
                 <div id="people-donated" class="houzz-back-main-card-summary-card-value">
-                  26
                 </div>
                 <div class="houzz-back-main-card-summary-card-caption">
                   People Donated
@@ -11146,7 +11182,7 @@
                     <img src="https://poc-community.herokuapp.com/ic-money.svg" class="houzz-back-main-card-summary-card-image" />
                   </div>
                   <div id="overall-donated" class="houzz-back-main-card-summary-card-value">
-                  $ <span> 26 </span>
+                  $ <span></span>
                   </div>
                   <div class="houzz-back-main-card-summary-card-caption">
                     Overall Donated
@@ -11160,7 +11196,20 @@
               Recommended Projects
             </div>
             <div class="houzz-back-projects-filter-toolbar">
-
+              <div class="toolbar-caption">Refine by:</div>
+              <div class="toolbar-dropdown">
+                Name
+                <i class="fas fa-sort-down"></i>
+              </div>
+              
+              <div class="view-button-toggle">
+                  <i class="fas fa-bars"></i>
+                <div class="view-button-caption">List View</div>
+              </div>
+              <div class="view-button-toggle">
+                  <i class="fas fa-map-marker-alt"></i>
+                <div class="view-button-caption">Map View</div>
+              </div>
             </div>
             <div class="houzz-back-hero-project-container">
               <div class="project-hero-caption">Project of the month</div>
@@ -11178,8 +11227,6 @@
         
             <div id="projects-container">
             </div>
-           
-
           </div>
         </div>
       </div>
