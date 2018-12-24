@@ -53,8 +53,19 @@ function fillDetails(featureData) {
 
 var featureData = new FeatureData(fetchData());
 
+$(document).on('click', '#list-view-link', function(){
+  $('#projects-container, .houzz-back-hero-project-container').show();
+  $('#map-view').hide();
+  $(this).addClass('active');
+  $('#map-view-link').removeClass('active');
+});
 
-
+$(document).on('click', '#map-view-link', function(){
+  $('#projects-container, .houzz-back-hero-project-container').hide();
+  $('#map-view').show();
+  $(this).addClass('active');
+  $('#list-view-link').removeClass('active');
+});
 
 
 

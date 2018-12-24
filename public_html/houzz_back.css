@@ -19,3 +19,9 @@
 .view-button-toggle {
 	cursor: pointer;
 }
+
+#map-view-link.active, #list-view-link.active{
+	color: #3d8901;
+}
+
+    
