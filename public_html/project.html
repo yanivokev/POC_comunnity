@@ -10,7 +10,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-  <script src="feature_data.js"></script>
+  <script src="project.js"></script>
   <link rel="stylesheet" type="text/css" href="houzz_back.css">
 
   <base href="https://www.houzz.com/product/113781475-kendall-blue-bathroom-vanity-48-contemporary-bathroom-vanities-and-sink-consoles">
@@ -9932,7 +9932,7 @@
     margin-bottom: 21px;
   }
 
-  .donation-value {
+  .donation-value, .donation-people {
     font-family: proxima-nova, sans-serif;
     font-size: 24px;
     font-weight: 600;
@@ -11257,22 +11257,22 @@
           <div class="project-title">Affordable Construction Programs with IVHQ</div>
           <div class="project-location">
             <i class="fas fa-map-marker-alt"></i>
-            Riverview Park, New York
+            <span>Riverview Park, New York</span>
           </div>
           <div class="project-description">
             IVHQ supports building and renovation projects all around the world. We encourage our volunteers to work with locals to both learn and share valuable skills. Improving local infrastructure is a tangible and long lasting way to benefit the community. It can include building brand new structures, renovating existing buildings that are unsafe, or participating in civil infrastructure initiatives.
           </div>
           <div class="project-image-container">
-            <img src="https://revistaneon.net/wp-content/uploads/2015/07/House-Building.jpg" />
+            <img class="project-image" src="https://revistaneon.net/wp-content/uploads/2015/07/House-Building.jpg" />
             <div class="donation-container">
               <div class="donation-status-container">
-                <div class="donation-value">$5,840</div>
+                <div class="donation-value">$<span>5,840</span></div>
                 <div class="donation-progress-bar">
                   <div class="donation-progress"></div>
                 </div>
-                <div class="donation-caption">Pledged of $50,000 goal</div>
+                <div class="donation-caption">Pledged of $<span>50,000</span> goal</div>
 
-                <div class="donation-value">672</div>
+                <div class="donation-people">672</div>
                 <div class="donation-caption">People donated</div>
               </div>
               <div class="donation-actions-container">
@@ -11291,4 +11291,7 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    fillDetails(projectData);
+  </script>
 </body>
