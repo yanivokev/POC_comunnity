@@ -1,5 +1,21 @@
+function buildProjects(projects) {
+	projects.forEach(function(project) {
+		$('#projects-container').append("<div class='houzz-back-project-container'><div class='project-image-container'><img src="+project['Image']+" /></div><div class='project-content-container'><div class='project-title'>"+project['Title']+"</div><div class='project-description'>"+project['Description']+"</div><div class='project-description-read-more'>Read More</div><div class='project-status'>$"+project['totalDonatedAmount']+" donated  by Houzz</div></div></div>");
+	});
+}
+
+function buildProjectHero(projects, id) {
+	projects.forEach(function(project) {
+		if (project["Id"] == id)
+		$('.project-hero-content-title').html(project["Title"]);
+		$('.project-hero-content-description').html(project["Description"]);
+		$('.houzz-back-hero-project-img').attr('src', project["Image"]);
+	});
+}
+
 function FeatureData(json) {
     this.projects = json["featureData"]["projects"];
+    this.hero_project_id = json["featureData"]["heroProjectId"];
     var project_count = 0;
     var people_donated = 0;
     var total_donated = 0;
@@ -36,4 +52,9 @@ function fillDetails(featureData) {
 }
 
 var featureData = new FeatureData(fetchData());
+
+
+
+
+
 
