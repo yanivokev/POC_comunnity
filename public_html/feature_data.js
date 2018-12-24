@@ -6,10 +6,11 @@ function buildProjects(projects) {
 
 function buildProjectHero(projects, id) {
 	projects.forEach(function(project) {
-		if (project["Id"] == id)
-		$('.project-hero-content-title').html(project["Title"]);
-		$('.project-hero-content-description').html(project["Description"]);
-		$('.houzz-back-hero-project-img').attr('src', project["Image"]);
+		if (project["Id"] == id){
+			$('.project-hero-content-title').html(project["Title"]);
+			$('.project-hero-content-description').html(project["Description"]);
+			$('.houzz-back-hero-project-img').attr('src', project["Image"]);
+		}
 	});
 }
 
