@@ -9636,14 +9636,12 @@
   .houzz-back-content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 21px 0;
   }
 
   .houzz-back-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: white;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
     padding: 32px 21px;
   }
 
@@ -9893,6 +9891,39 @@
 
   .project-status i {
     margin-right: 4px;
+  }
+
+  .project-location {
+    font-size: 14px;
+    color: #979797;
+  }
+
+  .project-description {
+    margin: 16px 0 40px 0;
+  }
+
+  .project-image-container {
+    max-height: 400px;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .about-this-project-caption {
+    font-family: proxima-nova, sans-serif;
+    font-size: 24px;
+    color: #222222;
+  }
+
+  body.hz-grey-bg {
+    background: white !important;
+  }
+
+  .section-major-part {
+    width: 65%;
+  }
+
+  .section-minor-part {
+    width: 35%;
   }
 
 
@@ -11146,96 +11177,29 @@
     <div id="hz-page-content-wrapper" class="hz-page-content-wrapper">
       <div class="houzz-back-content-wrapper">
         <div class="houzz-back-section">
-          <div class="houzz-back-main-card">
-            <div class="houzz-back-main-card-content-wrapper">
-              <div class="houzz-back-main-card-title">
-                Houzz Back
-              </div>
-              <div class="houzz-back-main-card-description">
-                Houzz is paying it forward by empowering you to give back.
-                For every product you purchase, Houzz will donate $1 to help you strengthen and build your community.</br></br>
-                Together, we will build the foundation for change that will provide thousands of communities all over America with the strength, stability, and support they need to thrive.
-              </div>
+          <div class="section-major-part">
+            <div class="project-title">Affordable Construction Programs with IVHQ</div>
+            <div class="project-location">
+              <i class="fas fa-map-marker-alt"></i>
+              Riverview Park, New York
             </div>
-            <div class="houzz-back-main-card-summary-wrapper">
-              <div class="houzz-back-main-card-summary-card">
-                <div class="houzz-back-main-card-summary-card-icon">
-                  <img src="https://poc-community.herokuapp.com/ic-projects.svg" class="houzz-back-main-card-summary-card-image" />
-                </div>
-                <div id="open-projects" class="houzz-back-main-card-summary-card-value">
-                </div>
-                <div class="houzz-back-main-card-summary-card-caption">
-                  Open Projects
-                </div>
-              </div>
-              <div class="houzz-back-main-card-summary-card">
-                <div class="houzz-back-main-card-summary-card-icon">
-                  <img src="https://poc-community.herokuapp.com/ic-people.svg" class="houzz-back-main-card-summary-card-image" />
-                </div>
-                <div id="people-donated" class="houzz-back-main-card-summary-card-value">
-                </div>
-                <div class="houzz-back-main-card-summary-card-caption">
-                  People Donated
-                </div>
-              </div>
-              <div class="houzz-back-main-card-summary-card">
-                  <div class="houzz-back-main-card-summary-card-icon">
-                    <img src="https://poc-community.herokuapp.com/ic-money.svg" class="houzz-back-main-card-summary-card-image" />
-                  </div>
-                  <div id="overall-donated" class="houzz-back-main-card-summary-card-value">
-                  $ <span></span>
-                  </div>
-                  <div class="houzz-back-main-card-summary-card-caption">
-                    Overall Donated
-                  </div>
-                </div>
+            <div class="project-description">
+              IVHQ supports building and renovation projects all around the world. We encourage our volunteers to work with locals to both learn and share valuable skills. Improving local infrastructure is a tangible and long lasting way to benefit the community. It can include building brand new structures, renovating existing buildings that are unsafe, or participating in civil infrastructure initiatives.
+            </div>
+            <div class="project-image-container">
+              <img src="https://revistaneon.net/wp-content/uploads/2015/07/House-Building.jpg" />
+            </div>
+            <div class="about-this-project-caption">About this project</div>
+            <div class="about-this-project-description">
+              Past volunteers have helped construct schools, orphanages, community centers and recreational centers. The tasks involved will vary according to location, project, community needs, and skill set. Safety is always a concern, and volunteers will never be asked to perform tasks that could be dangerous to them.</br></br>
+              In order to better prepare, we encourage our volunteers to participate in an interactive pre-departure training on what it means to be a responsible volunteer.</br></br>
+              Below are a list of countries that offer building volunteer programs with IVHQ.
             </div>
           </div>
-          <hr>
-          <div class="houzz-back-recommended-project-card">
-            <div class="houzz-back-recommended-project-title">
-              Recommended Projects
-            </div>
-            <div class="houzz-back-projects-filter-toolbar">
-              <div class="toolbar-caption">Refine by:</div>
-              <div class="toolbar-dropdown">
-                Name
-                <i class="fas fa-sort-down"></i>
-              </div>
-              
-              <div class="view-button-toggle">
-                  <i class="fas fa-bars"></i>
-                <div class="view-button-caption">List View</div>
-              </div>
-              <div class="view-button-toggle">
-                  <i class="fas fa-map-marker-alt"></i>
-                <div class="view-button-caption">Map View</div>
-              </div>
-            </div>
-            <div class="houzz-back-hero-project-container">
-              <div class="project-hero-caption">Project of the month</div>
-              <div class="project-hero-content-container">
-                <div class="project-hero-content">
-                  <div class="project-hero-content-title">Project Name</div>
-                  <div class="project-hero-content-description">
-                    Let's help more children in Northview Heights overcome obstacles and reach their potential. s a
-                  </div>
-                </div>
-                <div class="project-hero-read-more">Read More</div>
-              </div>
-              <img src="https://projectlifenow.com/wp-content/uploads/2018/01/Project-Life-Donation-Banner2.jpg" class="houzz-back-hero-project-img" />
-            </div>
-        
-            <div id="projects-container">
-            </div>
-          </div>
+        </div>
+        <div class="section-minor-part">
         </div>
       </div>
     </div>
   </div>
-  <script>
-    fillDetails(featureData);
-    buildProjects(featureData.projects);
-    buildProjectHero(featureData.projects, featureData.hero_project_id);
-  </script>
 </body>
