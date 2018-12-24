@@ -9636,11 +9636,12 @@
   .houzz-back-content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 21px 0;
   }
 
   .houzz-back-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: white;
     padding: 32px 21px;
   }
@@ -9868,6 +9869,7 @@
     line-height: 1.5;
     letter-spacing: normal;
     color: #222222;
+    width: 65%;
   }
 
   .project-description {
@@ -9896,34 +9898,109 @@
   .project-location {
     font-size: 14px;
     color: #979797;
+    width: 65%;
   }
 
   .project-description {
     margin: 16px 0 40px 0;
+    width: 65%;
   }
 
   .project-image-container {
     max-height: 400px;
     margin-bottom: 40px;
     width: 100%;
+    display: flex;
+  }
+
+  .project-image-container img {
+    width: 65%;
+  }
+
+  .donation-container {
+    width: calc(35% - 16px);
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+  }
+
+  .donation-status-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    padding: 32px 21px;
+    margin-bottom: 21px;
+  }
+
+  .donation-value {
+    font-family: proxima-nova, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #222222;
+  }
+
+  .donation-progress-bar {
+    background-color: #e6e6e6;
+    border-radius: 100px;
+    width: 100%;
+    height: 16px;
+    display: grid;
+    margin: 5px 0;
+    position: relative;
+  }
+
+  .donation-progress {
+    background-color: #6cb83b;
+    border-radius: 100px;
+    width: 30%;
+    height: 16px;
+    display: grid;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .donation-caption {
+    font-size: 14px;
+    color: #222222;
+    margin-bottom: 28px;
+  }
+
+  .donation-actions-container {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    color: #666666;
+    font-weight: 600;
+    align-items: center;
+  }
+
+  .donate-button {
+    font-family: proxima-nova, sans-serif;
+    color: white;
+    border-radius: 3px;
+    background-color: #6cb83b;
+    font-size: 16px;
+    padding: 10px 25px;
+    margin-left: 47px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
   }
 
   .about-this-project-caption {
     font-family: proxima-nova, sans-serif;
     font-size: 24px;
     color: #222222;
+    width: 65%;
+  }
+
+  .about-this-project-description {
+    width: 65%;
   }
 
   body.hz-grey-bg {
     background: white !important;
-  }
-
-  .section-major-part {
-    width: 65%;
-  }
-
-  .section-minor-part {
-    width: 35%;
   }
 
 
@@ -11177,27 +11254,39 @@
     <div id="hz-page-content-wrapper" class="hz-page-content-wrapper">
       <div class="houzz-back-content-wrapper">
         <div class="houzz-back-section">
-          <div class="section-major-part">
-            <div class="project-title">Affordable Construction Programs with IVHQ</div>
-            <div class="project-location">
-              <i class="fas fa-map-marker-alt"></i>
-              Riverview Park, New York
-            </div>
-            <div class="project-description">
-              IVHQ supports building and renovation projects all around the world. We encourage our volunteers to work with locals to both learn and share valuable skills. Improving local infrastructure is a tangible and long lasting way to benefit the community. It can include building brand new structures, renovating existing buildings that are unsafe, or participating in civil infrastructure initiatives.
-            </div>
-            <div class="project-image-container">
-              <img src="https://revistaneon.net/wp-content/uploads/2015/07/House-Building.jpg" />
-            </div>
-            <div class="about-this-project-caption">About this project</div>
-            <div class="about-this-project-description">
-              Past volunteers have helped construct schools, orphanages, community centers and recreational centers. The tasks involved will vary according to location, project, community needs, and skill set. Safety is always a concern, and volunteers will never be asked to perform tasks that could be dangerous to them.</br></br>
-              In order to better prepare, we encourage our volunteers to participate in an interactive pre-departure training on what it means to be a responsible volunteer.</br></br>
-              Below are a list of countries that offer building volunteer programs with IVHQ.
+          <div class="project-title">Affordable Construction Programs with IVHQ</div>
+          <div class="project-location">
+            <i class="fas fa-map-marker-alt"></i>
+            Riverview Park, New York
+          </div>
+          <div class="project-description">
+            IVHQ supports building and renovation projects all around the world. We encourage our volunteers to work with locals to both learn and share valuable skills. Improving local infrastructure is a tangible and long lasting way to benefit the community. It can include building brand new structures, renovating existing buildings that are unsafe, or participating in civil infrastructure initiatives.
+          </div>
+          <div class="project-image-container">
+            <img src="https://revistaneon.net/wp-content/uploads/2015/07/House-Building.jpg" />
+            <div class="donation-container">
+              <div class="donation-status-container">
+                <div class="donation-value">$5,840</div>
+                <div class="donation-progress-bar">
+                  <div class="donation-progress"></div>
+                </div>
+                <div class="donation-caption">Pledged of $50,000 goal</div>
+
+                <div class="donation-value">672</div>
+                <div class="donation-caption">People donated</div>
+              </div>
+              <div class="donation-actions-container">
+                volunteer
+                <div class="donate-button">Houzz it Forward</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="section-minor-part">
+          <div class="about-this-project-caption">About this project</div>
+          <div class="about-this-project-description">
+            Past volunteers have helped construct schools, orphanages, community centers and recreational centers. The tasks involved will vary according to location, project, community needs, and skill set. Safety is always a concern, and volunteers will never be asked to perform tasks that could be dangerous to them.</br></br>
+            In order to better prepare, we encourage our volunteers to participate in an interactive pre-departure training on what it means to be a responsible volunteer.</br></br>
+            Below are a list of countries that offer building volunteer programs with IVHQ.
+          </div>
         </div>
       </div>
     </div>
