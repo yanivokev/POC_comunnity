@@ -1,6 +1,6 @@
 function buildProjects(projects) {
 	projects.forEach(function(project) {
-		$('#projects-container').append("<div class='houzz-back-project-container'><div class='project-image-container'><img src="+project['Image']+" /></div><div class='project-content-container'><div class='project-title'>"+project['Title']+"</div><div class='project-description'>"+project['Description']+"</div><div class='project-description-read-more'><a href='./project.html?id="+project['Id']+"'>Read More</div><div class='project-status'>$"+project['totalDonatedAmount']+" donated  by Houzz</div></div></div>");
+		$('#projects-container').append("<div class='houzz-back-project-container'><div class='project-image-container'><img src="+project['Image']+" /></div><div class='project-content-container'><div class='project-title'>"+project['Title']+"</div><div class='project-description'>"+project['Description']+"</div><div class='project-description-read-more'><a href='./project.html?id="+project['Id']+"'>Read More</a></div><div class='project-status'>$"+project['totalDonatedAmount']+" donated  by Houzz</div></div></div>");
 	});
 }
 
