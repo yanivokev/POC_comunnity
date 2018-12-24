@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous">
 
@@ -9986,6 +9987,7 @@
     cursor: pointer;
     align-items: center;
     display: flex;
+    outline: none !important;
   }
 
   .about-this-project-caption {
@@ -10001,6 +10003,50 @@
 
   body.hz-grey-bg {
     background: white !important;
+  }
+
+  .hbs .modal .modal-content .modal-header {
+    font-family: proxima-nova, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #222222;
+    background-color: white;
+    padding: 22px 0px 0 28px;
+    border-bottom: none;
+    min-height: 0;
+  }
+
+  .hbs .modal-body {
+    position: relative;
+    padding: 16px 32px;
+  }
+
+  .hbs .modal .modal-content {
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.36);
+    width: 600px;
+  }
+
+  .modal-title {
+    font-family: proxima-nova, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #222222;
+  }
+
+  .donation-modal-text {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #222222;
+    font-family: proxima-nova, sans-serif;
+  }
+
+  .radio-toolbar {
+    margin: 16px 0;
+  }
+
+  .radio-toolbar input[type="radio"] {
+    margin-right: 12px;
+    margin-bottom: 16px;
   }
 
 
@@ -11277,7 +11323,9 @@
               </div>
               <div class="donation-actions-container">
                 volunteer
-                <div class="donate-button">Houzz it Forward</div>
+                <button type="button" class="donate-button" data-toggle="modal" data-target="#exampleModal">
+                    Houzz it Forward
+                </button>
               </div>
             </div>
           </div>
@@ -11291,4 +11339,33 @@
       </div>
     </div>
   </div>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"      aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title" id="exampleModalLabel">You’re doing good!</div>
+        </div>
+        <div class="modal-body">
+          <div class="donation-modal-text">
+            You have $10 in your Houzz account.</br> 
+            How much would you like to donate?
+          </div>
+          <div class="radio-toolbar">
+            <input type="radio" name="amount" value="$1">$1<br>
+            <input type="radio" name="amount" value="$5">$5<br>
+            <input type="radio" name="amount" value="All">All<br> 
+            <input type="radio" name="amount" value="Other">Another amount: ____<br>   
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Donate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
