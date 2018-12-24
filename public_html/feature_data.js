@@ -17,7 +17,7 @@ function buildProjectHero(projects, id) {
 function FeatureData(json) {
     this.projects = json["featureData"]["projects"];
 		this.hero_project_id = json["featureData"]["heroProjectId"];
-		$('#hero-project-read-more').href('project.html?id='+this.hero_project_id);
+		document.getElementById('hero-project-read-more').setAttribute('href', 'project.html?id='+this.hero_project_id);
     var project_count = 0;
     var people_donated = 0;
     var total_donated = 0;
